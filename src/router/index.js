@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Head from 'vue-head'
 import Home from '@/views/Home'
-import CheckLogin from '@/views/CheckLogin'
-import { isNil } from 'lodash'
-import store from '@/store'
+// import CheckLogin from '@/views/CheckLogin'
+// import { isNil } from 'lodash'
+// import store from '@/store'
 
 Vue.use(Router)
 
@@ -21,48 +21,12 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/home',
+      path: '/',
       name: 'home',
       component: Home,
       meta: {
         authNotRequired: true
       }
-    },
-    {
-      path: '/check-login',
-      name: 'check-login',
-      component: CheckLogin,
-      meta: {
-        authNotRequired: true
-      }
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: () =>
-        import(
-          /* webpackChunkName: "client-chunk-login" */ '@/views/Login.vue'
-        ),
-      meta: {
-        authNotRequired: true
-      }
-    },
-    {
-      path: '/products',
-      name: 'products',
-      component: () =>
-        import(
-          /* webpackChunkName: "client-chunk-products" */ '@/views/Products.vue'
-        )
-    },
-    {
-      path: '/products/:id',
-      name: 'product',
-      props: true,
-      component: () =>
-        import(
-          /* webpackChunkName: "client-chunk-product-details" */ '@/views/Product.vue'
-        )
     },
     { path: '*', redirect: '/home' }
   ]
@@ -73,14 +37,14 @@ const router = new Router({
  */
 // eslint-disable-next-line consistent-return
 router.beforeEach((to, from, next) => {
-  if (
-    !(to.meta && to.meta.authNotRequired) &&
-    isNil(store.state.authentication.user)
-  ) {
-    const path =
-      store.state.authentication.user === null ? '/login' : '/check-login'
-    return next(`${path}?redirectUrl=${to.path}`)
-  }
+  // if (
+  //   !(to.meta && to.meta.authNotRequired) &&
+  //   isNil(store.state.authentication.user)
+  // ) {
+  //   const path =
+  //     store.state.authentication.user === null ? '/login' : '/check-login'
+  //   return next(`${path}?redirectUrl=${to.path}`)
+  // }
   next()
 })
 

@@ -1,5 +1,6 @@
-import Vue from 'vue'
+import '@/assets/scss/style.scss'
 
+import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -17,11 +18,3 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
-
-// eslint-disable-next-line no-console
-console.info(`
-🍱 This app was bootstrapped with bento-starter 🍱
-
-👉 https://bento-starter.netlify.com/
-
-`)

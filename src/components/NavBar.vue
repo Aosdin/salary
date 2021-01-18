@@ -5,7 +5,7 @@
       <span class="site-name title-desktop">{{ appTitle }}</span>
       <span class="site-name title-mobile">{{ appShortTitle }}</span>
     </router-link>
-    <div class="links">
+    <div class="links" v-if="false">
       <nav class="nav-links">
         <div class="nav-item">
           <router-link to="/products">Products</router-link>

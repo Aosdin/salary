@@ -6,17 +6,17 @@
         <img class="app-logo" src="@/assets/logo.png" />
         <h3 class="title">Install {{ appTitle }}</h3>
         <p class="description">
-          Install this application to your home screen for quickly and easy
-          access when you're on the go.
+          빠르고 쉽게 홈 화면에이 응용 프로그램을 설치하십시오.
+          이동 중에 액세스.
         </p>
       </div>
 
       <div class="footer">
-        Just tap
+        클릭하세요.
         <img
           class="apple-navigation-action-img"
           src="@/assets/img/apple-navigation-action.png"
-        />then 'Add to Home Screen'
+        />'홈 화면에 추가'
       </div>
     </div>
   </div>
