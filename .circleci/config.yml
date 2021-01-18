@@ -87,9 +87,6 @@ jobs:
     steps:
       - attach_workspace:
           at: .
-      - run:
-          name: 'Check bundles sizes'
-          command: npm run bundlesize
 
   deploy:
     executor: default-executor
