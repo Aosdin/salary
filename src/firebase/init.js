@@ -3,12 +3,12 @@ import 'firebase/auth'
 
 // The configuration below is not sensitive data. You can serenely add your config here
 const config = {
-  apiKey: 'AIzaSyCe6CSzOUs6_Ij_VHa6hancdEi6CNBtw7c',
-  authDomain: 'salary-korea.web.app/',
-  databaseURL: 'https://bento-starter.firebaseio.com',
+  apiKey: 'AIzaSyAlqvqm8G1r-9GhT-21ilYGYTJG0uI50aA',
+  authDomain: '1million-dollar.com/',
+  databaseURL: '',
   projectId: 'salary-korea',
   storageBucket: 'bento-starter.appspot.com',
-  messagingSenderId: '458464977217'
+  messagingSenderId: '644257855975'
 }
 
 firebase.initializeApp(config)
