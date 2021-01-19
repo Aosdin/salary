@@ -3,7 +3,7 @@
     <div class="modal-wrapper">
       <div class="close" @click="$emit('close')"></div>
       <div class="main-content">
-        <img class="app-logo" src="@/assets/logo.png" />
+        <img class="app-logo" src="@/assets/img/top-logo.png" />
         <h3 class="title">Install {{ appTitle }}</h3>
         <p class="description">
           빠르고 쉽게 홈 화면에이 응용 프로그램을 설치하십시오.
