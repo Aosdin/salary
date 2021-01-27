@@ -1,6 +1,6 @@
 <template>
   <header class="navbar" :class="{ offline: !networkOnLine }">
-    <router-link to="/">
+    <router-link to="/" v-if="false">
       <img alt="logo-bento" class="logo" src="@/assets/img/top-logo.png" />
       <span class="site-name title-desktop">{{ appTitle }}</span>
       <span class="site-name title-mobile">{{ appShortTitle }}</span>
@@ -60,12 +60,11 @@ export default {
   left: 0;
   z-index: 20;
   right: 0;
-  height: $navbar-height;
+  height: 15vw;
   background-color: $navbar-color;
   box-sizing: border-box;
   border-bottom: 1px solid #eaecef;
-  padding: 0.7rem 1.5rem;
-  line-height: 2.2rem;
+  line-height: 15vw;
 
   a {
     display: flex;

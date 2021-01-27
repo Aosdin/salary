@@ -4,7 +4,6 @@
     <div class="main-wrapper">
       <router-view />
     </div>
-
     <new-content-available-toastr
       v-if="newContentAvailable"
       class="new-content-available-toastr"
@@ -39,9 +38,11 @@ export default {
 </script>
 
 <style lang="scss">
-body {
+body, html {
   margin: 0;
-
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
   a {
     font-weight: 500;
     text-decoration: none;
@@ -74,9 +75,17 @@ body {
     }
 
     .main-wrapper {
-      margin-top: 3.6rem;
-      padding: 20px;
+      margin-top: 15vw;
 
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 20vw;
+        background-color: #FFBB31;
+      }
       .page-wrapper {
         width: 60%;
         margin: auto;
