@@ -1,4 +1,6 @@
 export default {
+  setSettingDialog: (state, isShow) =>
+    (state.settingDialog = isShow),
   /* Product input name */
   setProductNameToCreate: (state, productNameToCreate) =>
     (state.productNameToCreate = productNameToCreate),

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" data-app>
     <nav-bar></nav-bar>
     <div class="main-wrapper">
       <router-view />
@@ -75,24 +75,15 @@ body, html {
     }
 
     .main-wrapper {
-      margin-top: 15vw;
-
+      margin-top: 50px;
       &:after {
         content: '';
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100vw;
-        height: 20vw;
+        height: 100px;
         background-color: #FFBB31;
-      }
-      .page-wrapper {
-        width: 60%;
-        margin: auto;
-
-        @media screen and (max-width: 1000px) {
-          width: 100%;
-        }
       }
     }
   }

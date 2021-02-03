@@ -1,20 +1,20 @@
 <template>
   <header class="navbar" :class="{ offline: !networkOnLine }">
-    <router-link to="/" v-if="false">
+    <router-link v-if="false" to="/">
       <img alt="logo-bento" class="logo" src="@/assets/img/top-logo.png" />
       <span class="site-name title-desktop">{{ appTitle }}</span>
       <span class="site-name title-mobile">{{ appShortTitle }}</span>
     </router-link>
-    <div class="links" v-if="false">
+    <div class="links">
       <nav class="nav-links">
-        <div class="nav-item">
-          <router-link to="/products">Products</router-link>
-        </div>
-        <div v-if="!isUserLoggedIn && networkOnLine" class="nav-item">
+        <v-icon @click="setSettingDialog">
+          mdi-format-list-bulleted-square
+        </v-icon>
+        <div v-if="!isUserLoggedIn && networkOnLine && false" class="nav-item">
           <router-link to="/login">Login</router-link>
         </div>
         <div
-          v-if="isUserLoggedIn && networkOnLine"
+          v-if="isUserLoggedIn && networkOnLine && false"
           class="nav-item logout-item"
           @click="logout"
         >
@@ -35,7 +35,7 @@
 
 <script>
 import firebase from 'firebase/app'
-import { mapGetters, mapState } from 'vuex'
+import { mapGetters, mapState, mapActions } from 'vuex'
 
 export default {
   computed: {
@@ -44,8 +44,14 @@ export default {
     ...mapState('app', ['networkOnLine', 'appTitle', 'appShortTitle'])
   },
   methods: {
+    ...mapActions('products', {
+      setSettingDialogAction: 'setSettingDialog'
+    }),
     async logout() {
       await firebase.auth().signOut()
+    },
+    setSettingDialog() {
+      this.setSettingDialogAction(true)
     }
   }
 }
@@ -60,7 +66,7 @@ export default {
   left: 0;
   z-index: 20;
   right: 0;
-  height: 15vw;
+  height: 50px;
   background-color: $navbar-color;
   box-sizing: border-box;
   border-bottom: 1px solid #eaecef;

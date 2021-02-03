@@ -2,5 +2,6 @@ export default {
   products: null,
   productNameToCreate: '',
   productDeletionPending: [],
-  productCreationPending: false
+  productCreationPending: false,
+  settingDialog: false
 }

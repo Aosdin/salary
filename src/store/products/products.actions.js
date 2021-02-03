@@ -4,6 +4,14 @@ export default {
   /**
    * Fetch products of current loggedin user
    */
+  setSettingDialog: async ({ commit }, isShow) => {
+    console.log(isShow)
+    commit('setSettingDialog', isShow)
+  },
+
+  /**
+   * Fetch products of current loggedin user
+   */
   getUserProducts: async ({ rootState, commit }) => {
     const userProductDb = new UserProductsDB(rootState.authentication.user.id)
 
