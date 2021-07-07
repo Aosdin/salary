@@ -4,13 +4,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test:e2e": "vue-cli-service test:e2e",
-    "test:e2e:headless": "vue-cli-service test:e2e --headless",
-    "test:unit": "vue-cli-service test:unit",
-    "prettier:format-all": "prettier --write \"**/*.{vue,scss,sass,js,json}\"",
-    "prettier:check": "prettier \"**/*.{vue,scss,sass,js,json}\" --list-different",
-    "firebase:deploy:ci": "firebase deploy --non-interactive --token $FIREBASE_TOKEN"
+    "lint": "vue-cli-service lint"
   },
   "engines": {
     "npm": ">=5.5.0",
@@ -19,15 +13,12 @@
   "dependencies": {
     "@mdi/font": "^5.9.55",
     "core-js": "^3.8.2",
-    "firebase": "^6.6.2",
     "gsap": "^3.6.0",
     "is_js": "^0.9.0",
     "lodash": "^4.17.20",
     "pwacompat": "^2.0.17",
     "register-service-worker": "^1.7.2",
     "vue": "^2.6.12",
-    "vue-head": "^2.2.0",
-    "vue-router": "^3.4.9",
     "vue-slider-component": "^3.2.11",
     "vuetify": "^2.4.3",
     "vuex": "^3.6.0"
