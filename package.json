@@ -18,6 +18,7 @@
     "lodash": "^4.17.20",
     "pwacompat": "^2.0.17",
     "register-service-worker": "^1.7.2",
+    "sass-loader": "^12.1.0",
     "vue": "^2.6.12",
     "vue-slider-component": "^3.2.11",
     "vuetify": "^2.5.6",
