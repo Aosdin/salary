@@ -60,7 +60,7 @@
             <v-list-item>
               <v-list-item-title class="font-weight-light mr-2">월실수령액</v-list-item-title>
               <v-list-item-subtitle class="text-right font-weight-bold title">
-                {{ Math.floor(realIncome).toLocaleString() }}원
+                <em class="text--primary">{{ Math.floor(realIncome).toLocaleString() }}</em>원
               </v-list-item-subtitle>
             </v-list-item>
           </div>
