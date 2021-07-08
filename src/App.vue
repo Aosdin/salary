@@ -65,6 +65,7 @@
             </v-list-item>
           </div>
 
+
           <!-- 설정 팝업 -->
           <v-dialog v-model="settingDialog">
             <v-card style="overflow: hidden">
